@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Kelapa Sawit - Tanaman Penghasil Minyak Nabati</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        header {
+            background: linear-gradient(135deg, #2e7d32 0%, #66bb6a 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><rect fill="%234caf50" width="800" height="400"/><circle fill="%23388e3c" cx="400" cy="200" r="150" opacity="0.3"/><text x="400" y="200" font-size="60" fill="white" text-anchor="middle" font-family="Arial">🌴</text></svg>');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .hero-text {
+            color: white;
+            font-size: 3rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #66bb6a;
+            padding-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            color: #388e3c;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .card ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+
+        .info-box strong {
+            color: #2e7d32;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .grid-item {
+            background: #f1f8e9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #aed581;
+            transition: all 0.3s ease;
+        }
+
+        .grid-item:hover {
+            background: #dcedc8;
+            transform: scale(1.05);
+        }
+
+        .grid-item h4 {
+            color: #33691e;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .hero-image {
+                height: 250px;
+            }
+
+            .hero-text {
+                font-size: 2rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .card h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌴 Blog Kelapa Sawit</h1>
+        <p>Mengenal Lebih Dekat Tanaman Penghasil Minyak Nabati Terbesar di Dunia</p>
+    </header>
+
+    <div class="container">
+        <div class="hero-image">
+            <div class="hero-text">🌴</div>
+        </div>
+
+        <div class="card">
+            <h2>Apa itu Kelapa Sawit?</h2>
+            <p>
+                Kelapa sawit (<em>Elaeis guineensis</em>) adalah tanaman tropis yang berasal dari Afrika Barat. 
+                Tanaman ini merupakan salah satu komoditas perkebunan terpenting di Indonesia dan Malaysia, 
+                menghasilkan minyak nabati yang paling banyak dikonsumsi di dunia.
+            </p>
+            <div class="info-box">
+                <strong>Tahukah Anda?</strong> Indonesia adalah produsen minyak kelapa sawit terbesar di dunia, 
+                menyumbang sekitar 58% dari total produksi global!
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Karakteristik Tanaman Kelapa Sawit</h2>
+            
+            <h3>Morfologi Tanaman</h3>
+            <ul>
+                <li><strong>Batang:</strong> Berbentuk silindris, tidak bercabang, dapat mencapai tinggi 20-30 meter</li>
+                <li><strong>Daun:</strong> Berbentuk menyirip (pinnate), panjang 5-7 meter dengan 200-300 anak daun</li>
+                <li><strong>Buah:</strong> Berbentuk bulat lonjong, berwarna merah hingga hitam saat matang</li>
+                <li><strong>Akar:</strong> Sistem akar serabut yang menyebar luas</li>
+            </ul>
+
+            <h3>Kondisi Tumbuh Optimal</h3>
+            <div class="grid">
+                <div class="grid-item">
+                    <h4>🌡️ Suhu</h4>
+                    <p>24-28°C</p>
+                </div>
+                <div class="grid-item">
+                    <h4>💧 Curah Hujan</h4>
+                    <p>2000-2500 mm/tahun</p>
+                </div>
+                <div class="grid-item">
+                    <h4>☀️ Sinar Matahari</h4>
+                    <p>5-7 jam/hari</p>
+                </div>
+                <div class="grid-item">
+                    <h4>🏔️ Ketinggian</h4>
+                    <p>0-500 mdpl</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Manfaat Kelapa Sawit</h2>
+            
+            <h3>1. Industri Pangan</h3>
+            <p>
+                Minyak kelapa sawit digunakan dalam berbagai produk makanan seperti minyak goreng, margarin, 
+                shortening, dan sebagai bahan baku industri makanan olahan.
+            </p>
+
+            <h3>2. Industri Non-Pangan</h3>
+            <p>
+                Digunakan dalam pembuatan sabun, kosmetik, deterjen, lilin, dan biodiesel sebagai energi alternatif.
+            </p>
+
+            <h3>3. Ekonomi</h3>
+            <p>
+                Memberikan lapangan kerja bagi jutaan orang dan menjadi sumber devisa negara yang signifikan.
+            </p>
+
+            <h3>4. Lingkungan</h3>
+            <p>
+                Perkebunan kelapa sawit yang dikelola dengan baik dapat menyerap karbon dioksida dan 
+                menghasilkan oksigen, berkontribusi pada pengurangan emisi gas rumah kaca.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Proses Budidaya Kelapa Sawit</h2>
+            
+            <h3>Tahapan Budidaya:</h3>
+            <ul>
+                <li><strong>Pembibitan (0-12 bulan):</strong> Pemilihan benih unggul dan perawatan di pembibitan</li>
+                <li><strong>Penanaman (12-18 bulan):</strong> Pemindahan bibit ke lahan dengan jarak tanam 9x9 meter</li>
+                <li><strong>Pemeliharaan (18 bulan - 3 tahun):</strong> Pemupukan, penyiangan, dan pengendalian hama</li>
+                <li><strong>Masa Produktif (3-25 tahun):</strong> Tanaman mulai berbuah dan dapat dipanen</li>
+                <li><strong>Peremajaan (>25 tahun):</strong> Penggantian tanaman tua dengan bibit baru</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>Produktivitas:</strong> Satu hektar kebun kelapa sawit dapat menghasilkan 3-5 ton minyak 
+                kelapa sawit per tahun, jauh lebih tinggi dibanding tanaman penghasil minyak nabati lainnya.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Tantangan dan Keberlanjutan</h2>
+            <p>
+                Industri kelapa sawit menghadapi berbagai tantangan terkait keberlanjutan lingkungan, 
+                termasuk deforestasi dan hilangnya habitat satwa liar. Untuk mengatasi hal ini, 
+                berbagai inisiatif telah dilakukan:
+            </p>
+            <ul>
+                <li>Sertifikasi RSPO (Roundtable on Sustainable Palm Oil)</li>
+                <li>Penerapan praktik pertanian berkelanjutan</li>
+                <li>Program konservasi keanekaragaman hayati</li>
+                <li>Peningkatan produktivitas lahan existing tanpa ekspansi baru</li>
+                <li>Pengembangan plasma nutfah unggul</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Kesimpulan</h2>
+            <p>
+                Kelapa sawit adalah tanaman yang sangat penting bagi perekonomian Indonesia dan dunia. 
+                Dengan pengelolaan yang berkelanjutan dan bertanggung jawab, industri kelapa sawit dapat 
+                terus memberikan manfaat ekonomi sambil menjaga kelestarian lingkungan untuk generasi mendatang.
+            </p>
+            <p>
+                Penting bagi semua pihak - petani, perusahaan, pemerintah, dan konsumen - untuk bekerja sama 
+                dalam memastikan produksi minyak kelapa sawit yang ramah lingkungan dan berkelanjutan.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Blog Kelapa Sawit</strong></p>
+        <p>Informasi dan Edukasi tentang Tanaman Kelapa Sawit</p>
+        <p>&copy; 2025 - Dibuat dengan ❤️ untuk edukasi</p>
+    </footer>
+</body>
+</html>
